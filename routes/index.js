@@ -2,11 +2,12 @@ const express = require('express');
 const userController = require('../controllers/userController');
 const authController = require('../controllers/authController');
 const tourismController = require('../controllers/tourismController');
+const { catchErrors } = require('../handlers/errorHandlers');
 
 const router = express.Router();
 
 
-router.get('/', tourismController.showHome);
+router.get('/', catchErrors(tourismController.showHome));
 
 router.get('/signup', userController.showSignup);
 router.post(
@@ -31,8 +32,15 @@ router.get(
 router.post(
   '/create-tour',
   authController.isLoggedIn,
-  tourismController.addNewTour
+  catchErrors(tourismController.addNewTour)
 );
+
+
+router.get('/explore', tourismController.showExplore);
+router.post('/explore', tourismController.searchTours);
+
+
+// router.get('/seed', tourismController.seedDB);
 
 
 module.exports = router;

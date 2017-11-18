@@ -6,4 +6,4 @@
 exports.dump = obj => JSON.stringify(obj, null, 2);
 
 // site name
-exports.siteName = 'Sustainable Tourism';
+exports.siteName = 'Trans Culture';
