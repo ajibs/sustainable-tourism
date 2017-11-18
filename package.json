@@ -1,0 +1,24 @@
+{
+  "name": "sustainable-tourism",
+  "version": "0.0.1",
+  "main": "start.js",
+  "scripts": {
+    "start": "node ./start.js",
+    "watch": "nodemon ./start.js --ignore public",
+    "assets": "webpack -w --display-max-modules 0",
+    "dev": "concurrently \"npm run watch\" \"npm run assets\" --names \"💻,📦\""
+  },
+  "repository": "https://github.com/ajibs/sustainable-tourism.git",
+  "author": "Bolu Ajibawo",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "express": "^4.16.2",
+    "mongoose": "^4.13.4"
+  },
+  "devDependencies": {
+    "eslint": "^4.11.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0"
+  }
+}
