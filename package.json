@@ -8,6 +8,9 @@
     "assets": "webpack -w --display-max-modules 0",
     "dev": "concurrently \"npm run watch\" \"npm run assets\" --names \"💻,📦\""
   },
+  "engines": {
+    "node": "8.9.1"
+  },
   "repository": "https://github.com/ajibs/sustainable-tourism.git",
   "author": "Bolu Ajibawo",
   "license": "MIT",

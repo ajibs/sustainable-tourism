@@ -1,0 +1,60 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title= `${title} | ${h.siteName}`
+    link(rel="shortcut icon" type="image/png" href="/images/icons/favicon.png")
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway")
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
+    link(rel="stylesheet" href="/dist/style.bundle.css")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.slim.min.js")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
+  body
+    nav(class="navbar navbar-default")
+      div(class="container-fluid")
+        div(class="navbar-header")
+          button(type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false")
+            span(class="sr-only") Toggle navigation
+            span(class="icon-bar")
+            span(class="icon-bar")
+            span(class="icon-bar")
+          a(class="navbar-brand" href="/") Home
+
+        div(class="collapse navbar-collapse" id="bs-example-navbar-collapse-1")
+          ul(class="nav navbar-nav navbar-right")
+            if (user)
+              li
+                a(href="/profile") Profile
+              li
+                a(href="/logout") Logout
+            else
+              li
+                a(href="/login") Login
+              li
+                a(href="/signup") Signup
+
+
+    block messages
+      if locals.flashes
+        - const categories = Object.keys(locals.flashes)
+        each category in categories
+          each message in flashes[category]
+            div(class="col-md-6 col-md-offset-3")
+              p(class="alert alert-info text-center")!= message
+
+
+    block content
+
+
+    footer
+      p Created with <span class="glyphicon glyphicon-heart"></span> from Nigeria
+      p Source code on
+        a(href="https://github.com/ajibs/sustainable-tourism" target="_blank")  Github
+          i(class="fa fa-github fa-lg" aria-hidden="true")
+
+
+    block scripts
+      if (title === 'Home')
+      script(src="/dist/App.bundle.js")
