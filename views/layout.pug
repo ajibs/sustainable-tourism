@@ -5,7 +5,7 @@ html(lang="en")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     title= `${title} | ${h.siteName}`
     link(rel="shortcut icon" type="image/png" href="/images/icons/favicon.png")
-    link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway")
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,700")
     link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
     link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
     link(rel="stylesheet" href="/dist/style.bundle.css")
@@ -56,5 +56,4 @@ html(lang="en")
 
 
     block scripts
-      if (title === 'Home')
       script(src="/dist/App.bundle.js")

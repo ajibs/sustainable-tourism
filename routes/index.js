@@ -23,4 +23,16 @@ router.get('/logout', authController.logout);
 router.get('/profile', userController.showProfile);
 
 
+router.get(
+  '/create-tour',
+  authController.isLoggedIn,
+  tourismController.showTourForm
+);
+router.post(
+  '/create-tour',
+  authController.isLoggedIn,
+  tourismController.addNewTour
+);
+
+
 module.exports = router;

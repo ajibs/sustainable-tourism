@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  section(class="container-fluid")
+    div(class="form-container col-md-8 col-md-offset-2")
+      h1(class="form-header text-center") Create an Experience
+      form(action="/create-tour" method="post")
+        input(type="hidden" name="_csrf" value= csrfToken)
+        each item in ['title', 'summary', 'location', 'fullDescription']
+          div(class="row")
+            div(class="form-group col-sm-6")
+              label(for=`${item}`) #{item}
+              input(class="form-control" type="text" name=`${item}` id=`${item}` required)
+        div(class="row")
+            div(class="form-group col-sm-6")
+              label(for="date") Date Available
+              input(class="form-control" type="date" name="date" id="date-limit" required)
+        div(class="row")
+            div(class="form-group col-sm-6")
+              label(for="price") Price
+              input(class="form-control" type="number" name="price" id="price" placeholder="enter amouunt in USD" required)
+        div(form-footer form-group pull-right)
+          input(class="btn btn-success" type="submit" value="Create Tour")

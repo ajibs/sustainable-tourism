@@ -12,6 +12,10 @@ body {
 
 header {
   text-align: center;
+  position: relative;
+  width: 100%;
+  min-height: auto;
+  padding: 150px 15px;
 }
 
 .navbar-default .navbar-brand, .navbar-default .navbar-nav>li>a {
@@ -21,9 +25,42 @@ header {
   font-size: 16px;
 }
 
+section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
 footer {
   margin-top: 40px;
   text-align: center;
+}
+
+.landing-button {
+  text-transform: uppercase;
+  background-color: #1db6ef;
+  width: 80%;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  padding: 20px
+}
+
+@media (min-width: 768px) {
+  .landing-button {
+      width: 250px;
+  }
+
+  #landing-button-tour-guide {
+      margin-left: 15px;
+  }
+
+  #landing-button-experiences {
+      margin-right: 15px;
+  }
+}
+
+.landing-button-text {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .going {
@@ -37,6 +74,7 @@ footer {
   font-size: 64px;
   font-weight: 400;
   text-transform: uppercase;
+  margin-bottom: 50px;
 }
 
 .top-wrapper {
@@ -67,11 +105,6 @@ footer {
 .data-button {
   margin-left: 20px;
   color: #333;
-}
-
-section {
-  padding-top: 30px;
-  padding-bottom: 30px;
 }
 
 .form-container {
@@ -118,4 +151,35 @@ section {
 
 .glyphicon-heart {
   color: #ff4500;
+}
+
+.sub-text {
+  margin-top: 50px;
+}
+
+.sub-inner-text {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.view-experiences{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-title {
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 5px;
+}
+
+.form-header {
+  margin-bottom: 50px;
+}
+
+.form-footer {
+  margin-top: 30px;
 }
