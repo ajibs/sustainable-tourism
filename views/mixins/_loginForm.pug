@@ -9,18 +9,9 @@ mixin loginForm(actionType)
         div(class="form-group")
           input(type="password" name="password" class="form-control" placeholder="enter password" minlength="4" required)
         button(type="submit" class="btn btn-success btn-lg") Submit
-      if (title != 'Connect Local')
-        h4(class="text-muted login-alt") or you can #{title} with one of the following:
-        div
-          a(href="/auth/google")
-            button(class="btn btn-lg icon-wrapper btn-bg-google")
-              i(class="fa fa-google-plus fa-lg" aria-hidden="true")
-              span Google
-          a(href="/auth/twitter")
-            button(class="btn btn-lg icon-wrapper btn-bg-twitter")
-              i(class="fa fa-twitter fa-lg" aria-hidden="true")
-              span Twitter
-          a(href="/auth/facebook")
-            button(class="btn btn-lg icon-wrapper btn-bg-facebook")
-              i(class="fa fa-facebook fa-lg" aria-hidden="true")
-              span Facebook
+        h4(class="text-muted login-alt") or you can #{title} with
+      div
+        a(href="/auth/google")
+          button(class="btn btn-lg icon-wrapper btn-bg-google")
+            i(class="fa fa-google-plus fa-lg" aria-hidden="true")
+            span Google

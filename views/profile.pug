@@ -5,7 +5,8 @@ block content
     div(class="form-container col-md-6 col-md-offset-3")
       h2 Your #{title}
       div(class="account-type")
+      if user.local
         h3(class="text-uppercase") Welcome  #{user.local.username}
-        a(href="/explore")
-          button(class="btn btn-primary btn-lg icon-wrapper") Book an Experience
-        a(href="/create-tour" class="btn btn-success btn-lg icon-wrapper") Create an Experience
+      a(href="/explore")
+        button(class="btn btn-primary btn-lg icon-wrapper") Book an Experience
+      a(href="/create-tour" class="btn btn-success btn-lg icon-wrapper") Create an Experience

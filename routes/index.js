@@ -41,8 +41,12 @@ router.post('/explore', catchErrors(tourismController.searchTours));
 
 
 router.get('/tour/:id', catchErrors(tourismController.showSingleTour));
-
 router.get('/tour/reserve/:id', catchErrors(tourismController.reserveTour));
+
+
+// Google Authenticate
+router.get('/auth/google', authController.googleAuth);
+router.get('/auth/google/callback', authController.googleCallback);
 
 
 // router.get('/seed', catchErrors(tourismController.seedDB));
