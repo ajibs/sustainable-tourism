@@ -16,5 +16,7 @@ block content
       +jobInfo('Price ($)', tour.price)
       +jobInfo('Available Date', tour.date)
       +jobInfo('Description', tour.fullDescription)
-      a(href=`reserve/${tour._id}`)
-        button(class="btn btn-primary btn-lg") Reserve Now
+      div(class="row")
+        div(class="col-md-10 col-md-offset-1 col-xs-12 .form-footer")
+          a(href=`reserve/${tour._id}`)
+            button(class="btn btn-primary btn-lg") Reserve and Pay Now

@@ -3,7 +3,7 @@ extends layout
 block content
   section(class="container-fluid")
     div(class="form-container col-md-6 col-md-offset-3")
-      h1(class="form-header") Create an Experience
+      h1(class="form-header") Creat a Tour
       form(action="/create-tour" method="post")
         input(type="hidden" name="_csrf" value= csrfToken)
         each item in ['title', 'summary', 'location', 'fullDescription']

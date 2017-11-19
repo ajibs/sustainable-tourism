@@ -33,4 +33,11 @@ exports.showProfile = (req, res) => {
   res.render('profile', {
     title: 'Profile'
   });
-}
+};
+
+
+exports.showDemo = (req, res) => {
+  res.render('demo', {
+    title: 'Demo'
+  });
+};

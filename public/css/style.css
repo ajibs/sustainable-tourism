@@ -4,10 +4,10 @@ html, body {
 }
 
 body {
-  background-color: #FEC200;
+  background-color: #FEBB02;
   color: #222;
   font-size: 18px;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway', 'Helvetica', sans-serif;
 }
 
 header {
@@ -37,11 +37,22 @@ footer {
 
 .landing-button {
   text-transform: uppercase;
-  background-color: #1db6ef;
+  background-color: #003580;
+  color: white;
   width: 80%;
   margin-bottom: 30px;
   border-radius: 5px;
   padding: 20px
+}
+
+.landing-button:hover {
+  background-color: #222;
+  color: white;
+}
+
+.landing-button:active {
+  background-color: #07c;;
+  color: white;
 }
 
 @media (min-width: 768px) {
@@ -61,13 +72,6 @@ footer {
 .landing-button-text {
   padding-left: 10px;
   padding-right: 10px;
-}
-
-.going {
-  background-color: #23232c;
-  color: #fff;
-  padding: 50px;
-  border-radius: 10px;
 }
 
 .super-title {
@@ -251,4 +255,8 @@ h5 {
 #search-wrapper {
   padding-bottom: 0;
   margin-bottom: 0;
+}
+
+.btn-primary {
+  background-color: #07c;
 }

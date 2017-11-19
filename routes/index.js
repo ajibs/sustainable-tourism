@@ -53,6 +53,7 @@ router.get('/auth/google', authController.googleAuth);
 router.get('/auth/google/callback', authController.googleCallback);
 
 
+router.get('/demo', userController.showDemo);
 // router.get('/seed', catchErrors(tourismController.seedDB));
 
 

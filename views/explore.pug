@@ -6,7 +6,7 @@ block content
     div(class="container")
       div(class="row")
         div(class="col-xs-12 col-md-8 col-md-offset-2 text-center")
-          h1(class="super-title") Explore Experiences
+          h1(class="super-title") Explore Tours
           form(action="/explore" method="post")
             input(type="hidden" name="_csrf" value= csrfToken)
             input(class="form-control" type="text" name="location" placeholder="Enter any city in the world")
@@ -31,4 +31,4 @@ block content
 
       // Get more experiences from the DB
       div(class="view-experiences")
-        a(href="#" class="btn btn-primary btn-lg") View more Experiences
+        a(href="#" class="btn btn-primary btn-lg") View more Tours
