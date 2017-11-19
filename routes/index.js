@@ -41,7 +41,11 @@ router.post('/explore', catchErrors(tourismController.searchTours));
 
 
 router.get('/tour/:id', catchErrors(tourismController.showSingleTour));
-router.get('/tour/reserve/:id', catchErrors(tourismController.reserveTour));
+router.get(
+  '/tour/reserve/:id',
+  authController.isLoggedIn,
+  catchErrors(tourismController.reserveTour)
+);
 
 
 // Google Authenticate
