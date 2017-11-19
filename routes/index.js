@@ -37,10 +37,15 @@ router.post(
 
 
 router.get('/explore', tourismController.showExplore);
-router.post('/explore', tourismController.searchTours);
+router.post('/explore', catchErrors(tourismController.searchTours));
 
 
-// router.get('/seed', tourismController.seedDB);
+router.get('/tour/:id', catchErrors(tourismController.showSingleTour));
+
+router.get('/tour/reserve/:id', catchErrors(tourismController.reserveTour));
+
+
+// router.get('/seed', catchErrors(tourismController.seedDB));
 
 
 module.exports = router;

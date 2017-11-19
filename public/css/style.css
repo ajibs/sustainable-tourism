@@ -73,11 +73,11 @@ footer {
 .super-title {
   font-size: 64px;
   font-weight: 400;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .top-wrapper {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 #search-input, .data-button {
@@ -223,6 +223,8 @@ h5 {
 }
 
 .card-title {
+  font-weight: bold;
+  color: blue;
   margin-bottom: .75rem;
 }
 

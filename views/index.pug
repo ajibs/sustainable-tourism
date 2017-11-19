@@ -22,11 +22,11 @@ block content
         each t, index in tours
             div(class="col-lg-4 col-md-6 mb-4")
               div(class="card h-100")
-                a(href="#")
+                a(href=`/tour/${t._id}`)
                   img(class="card-img-top" src=`images/photo${index}.jpeg` alt="")
                 div(class="card-body")
                   h4(class="card-title")
-                    a(href="#")= t.title
+                    a(href=`/tour/${t._id}`)= t.title
                   h5 $#{t.price}
                   p(class="card-text") #{t.summary}
                 div(class="card-footer")

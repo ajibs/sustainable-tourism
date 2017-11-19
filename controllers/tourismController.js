@@ -59,6 +59,30 @@ exports.searchTours = async (req, res) => {
 };
 
 
+exports.showSingleTour = async (req, res) => {
+  const tour = await Experience.findOne({ _id: req.params.id });
+
+  if (!tour) {
+    req.flash('failed', 'Error! Tour not found');
+    res.redirect('back');
+    return;
+  }
+
+  res.render('tour-details', {
+    title: 'Tour Details',
+    tour
+  });
+};
+
+
+exports.reserveTour = async (req, res) => {
+  // save to db
+  res.render('success', {
+    title: 'Tour Success'
+  });
+};
+
+
 exports.seedDB = async (req, res) => {
   // create demo data
   const demo = {
