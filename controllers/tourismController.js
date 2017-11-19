@@ -20,6 +20,7 @@ exports.showTourForm = (req, res) => {
 
 
 exports.addNewTour = async (req, res) => {
+  req.body.location = req.body.location.toLowerCase();
   const tour = new Experience(req.body);
   await tour.save();
 
@@ -41,12 +42,14 @@ exports.showExplore = async (req, res) => {
 
 
 exports.searchTours = async (req, res) => {
-  const { location } = req.body;
+  let { location } = req.body;
+  location = location.toLowerCase();
   const tours = await Experience.find({ location });
 
   if (!tours.length) {
-    req.flash('failed', 'Tours not found');
+    req.flash('failed', 'Tours not found for that city');
     res.redirect('back');
+    return;
   }
 
   res.render('explore', {
