@@ -14,8 +14,7 @@ exports.showHome = async (req, res) => {
 
 exports.showTourForm = (req, res) => {
   res.render('create-tour', {
-    title: 'Create Tour',
-    user: req.user.local.firstName
+    title: 'Create Tour'
   });
 };
 
@@ -35,6 +34,7 @@ exports.showExplore = async (req, res) => {
     .limit(18);
 
   res.render('explore', {
+    title: 'Explore',
     tours
   });
 };
@@ -50,6 +50,7 @@ exports.searchTours = async (req, res) => {
   }
 
   res.render('explore', {
+    title: 'Explore',
     tours
   });
 };
