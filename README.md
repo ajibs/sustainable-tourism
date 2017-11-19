@@ -6,9 +6,9 @@ Tran Culture was created with love for [iamtheCode](#) from Nigeria.
 
 
 ## Feature List
-* Authenticated User can book an experience.
-* Users can create an experience.
-* Users can explore and search for experiences by location
+* Authenticated User can book a tour.
+* Users can create a tour.
+* Users can explore and search for tours by location
 
 ## Getting Started
 Trans Culture is hosted on Heroku and can be accessed here:
