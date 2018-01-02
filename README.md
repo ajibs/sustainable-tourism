@@ -2,7 +2,7 @@
 
 Enjoy the best local experiences and empower people.
 
-Tran Culture was created with love for [iamtheCode](#) from Nigeria.
+Tran Culture was created with love for [Booking.com](https://www.booking.com/) and [iamtheCode](http://www.iamthecode.org/) from Nigeria.
 
 
 ## Feature List
@@ -25,7 +25,54 @@ Trans Culture is hosted on Heroku and can be accessed here:
  - [Node.js](https://nodejs.org/en/download/)
  - [MongoDb](https://www.mongodb.com/download-center#community)
  - [Yarn](https://yarnpkg.com/en/docs/install)
- - ``` yarn ``` will install all dependencies
+
+## Setup
+#### Local Copy
+To create a local copy, run the following in your terminal:
+```bash
+git clone https://github.com/ajibs/sustainable-tourism.git
+```
+Then change into the local directory, run the following in your terminal:
+```bash
+cd sustainable-tourism
+```
+
+#### Install Node.js and Yarn
+If you don't have Node.js installed, please go ahead and grab it [here](https://nodejs.org/). This project uses ES6+ features and requires Node version `>= 7.6.0` and `<=8.9.1`
+
+Yarn is a package manager for Node.js and can be installed from [here](https://yarnpkg.com/en/docs/install).
+
+To confirm that you have Node.js installed, run the following in your terminal:
+```bash
+node -v
+```
+You should get something like `v8.9.1`.
+
+To confirm that you have Yarn installed, run the following in your terminal:
+```bash
+yarn -v
+```
+You should get something like `1.3.2`.
+
+#### Setup Database and .env file
+You can setup a database on [mlab](https://mlab.com/). You should also create a `.env` file using `.env.sample` as a prototype.
+
+#### Install Node.js Modules
+To install all dependencies, run the following in your terminal:
+```bash
+yarn
+```
+
+## Development
+To kickstart the application, run the following in your terminal:
+```bash
+npm start
+```
+
+To continue full-stack development on this project, run the following in your terminal:
+```bash
+npm run dev
+```
 
 
 ## Built With
